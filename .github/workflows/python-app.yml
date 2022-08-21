@@ -41,10 +41,10 @@ jobs:
       if: always()
       uses: ravsamhq/notify-slack-action@v1
       with:
-      status: ${{ job.status }}
-      notify_when: 'failure'
+        status: ${{ job.status }}
+        notify_when: 'failure'
       env:
-      SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
+        SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
         
   publish:
     needs: [build]
